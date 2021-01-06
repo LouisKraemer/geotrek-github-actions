@@ -25,8 +25,8 @@ jobs:
         id: cache-node-modules
         uses: actions/cache@v2
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: ./frontend/node_modules
+          key: node-modules-${{ hashFiles('./frontend/yarn.lock') }}
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
