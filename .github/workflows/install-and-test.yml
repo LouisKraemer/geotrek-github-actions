@@ -31,3 +31,12 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
         working-directory: ./frontend
+      - name: Check types
+        run: yarn tsc
+        working-directory: ./frontend
+      - name: Run tests
+        run: yarn test:coverage
+        working-directory: ./frontend
+      - name: Check linter
+        run: yarn lint
+        working-directory: ./frontend
