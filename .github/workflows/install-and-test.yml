@@ -21,4 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: cd frontend && yarn
+        run: yarn
+        working-directory: ./frontend
