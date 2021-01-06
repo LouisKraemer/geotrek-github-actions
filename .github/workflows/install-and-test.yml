@@ -20,9 +20,5 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v2
-        with:
-          ref: 'main'
       - name: Install dependencies
-        run: yarn
+        run: cd frontend && yarn
